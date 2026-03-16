@@ -2,6 +2,7 @@ import requests
 import argparse
 import colorama
 from colorama import Fore, Back, Style
+import json
 
 colorama.init(autoreset=True)
 
@@ -11,12 +12,9 @@ args = parser.parse_args()
 
 url = args.url
 
-security_headers = {
-    "X-Frame-Options": "Clickjacking protection",
-    "Strict-Transport-Security": "HTTPS enforcement",
-    "X-Content-Type-Options": "MIME guessing protection",
-    "X-XSS-Protection": " the browser’s built-in protection against reflected XSS attacks" 
-}
+security_headers = {}
+with open("security-headers.json", "r") as config_file:
+    security_headers = json.load(config_file)
 
 count = len(security_headers)
 implemented = 0
