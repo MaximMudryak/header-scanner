@@ -1,0 +1,6 @@
+{
+    "X-Frame-Options": "Clickjacking protection", 
+    "Strict-Transport-Security": "HTTPS enforcement",
+    "X-Content-Type-Options": "MIME guessing protection",
+    "X-XSS-Protection": " the browsers built-in protection against reflected XSS attacks" 
+}
