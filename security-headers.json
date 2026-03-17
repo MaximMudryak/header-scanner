@@ -1,6 +1,6 @@
 {
-    "X-Frame-Options": "Clickjacking protection", 
-    "Strict-Transport-Security": "HTTPS enforcement",
-    "X-Content-Type-Options": "MIME guessing protection",
-    "X-XSS-Protection": " the browsers built-in protection against reflected XSS attacks" 
+    "X-Frame-Options": ["DENY", "SAMEORIGIN"], 
+    "Strict-Transport-Security": ["max-age=63072000; includeSubDomains; preload"],
+    "X-Content-Type-Options": ["nosniff"],
+    "X-XSS-Protection": ["0"]
 }
